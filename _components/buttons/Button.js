@@ -8,12 +8,13 @@ export const Button = ({
   indicatorColor,
   indicatorCount,
   indicatorSize,
+  onPress,
   isLoading = false,
 }) => {
 
   return (
     <>
-      <Animated.View>
+      <Animated.View onPress={() => onPress()}>
         <TouchableOpacity
           style={buttonStyles.loadingBtn}
           activeOpacity={1}

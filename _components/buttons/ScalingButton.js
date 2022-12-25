@@ -11,7 +11,7 @@ import { Button } from "./Button";
 
 export const ScalingButton = ({
                          children,
-                         onPress = () => {},
+                         onPress,
                          activeScale = 0.9,
                          springConfig = {
                              damping: 10,
@@ -46,6 +46,7 @@ export const ScalingButton = ({
 
     return (
         <LongPressGestureHandler
+            onPress={onPress}
             minDurationMs={0.5}
             maxDist={10}
             {...handlerProps}
